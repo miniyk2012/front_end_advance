@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=CSS, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: purple;
+            width: 100px;
+            height: 50px;
+        }
+        button:hover {
+            background-color: red;
+        }
+
+        #content {
+            font-size: 50px;
+        }
+
+        .title {
+            font-size: 30px;
+        }
+        div[attr1~="niu"] {
+            color: blue;
+        }
+
+        div[data-afd*="as"] {
+            color: red;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            text-decoration: underline;
+            font-family: "Helvetica", "Arial", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <button>BUtton</button>
+    <div class="title">hello, this is title</div>
+    <p id="content">THis is cotent</p>
+    <div attr1="n1iu" attr2="dfas">n1iu</div>
+    <div attr1="afd niu ll" attr2="dfas">afd niu ll</div>
+    <div attr1="1niu3" attr2="dfas">1niu3</div>
+    <div data-afd="asfd">af</div>
+
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>H4</h4>
+</body>
+</html>

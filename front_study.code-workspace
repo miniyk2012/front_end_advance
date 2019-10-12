@@ -7,5 +7,7 @@
 			"path": "/Users/thomas_young/Documents/code/front_end_basic"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "front_end_advance"
+	}
 }

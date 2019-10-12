@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Specificity</title>
+</head>
+<style>
+    .link-text {
+        color: red;
+    }
+
+    ul li a {
+        color: green;
+    }
+
+    ul a {
+        color: yellow;
+    }
+
+    a {
+        color: blue !important;
+    }
+</style>
+
+<body>
+    <ul>
+        <li><a class="link-text" style="color: purple;">the link</a></li>
+        <li>a list item</li>
+        <li>a list item</li>
+    </ul>
+</body>
+
+</html>
