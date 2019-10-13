@@ -99,3 +99,8 @@ Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以�
 [译] 选择 Grid 还是 Flex: https://juejin.im/post/5c7ce781e51d4514913c5bc4
 grid与flex的战役: https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
 grid是否可以取代flex: https://css-tricks.com/css-grid-replace-flexbox/
+
+    grid-auto-columns属性和grid-auto-rows属性用来设置: test10.html, test11.html
+    浏览器自动创建的多余网格的列宽和行高。它们的写法与grid-template-columns和grid-template-rows完全相同。
+    如果不指定这两个属性，浏览器完全根据单元格内容的大小，决定新增网格的列宽和行高。
+    常用来显示无限多的评论列表.

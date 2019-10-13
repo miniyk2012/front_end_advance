@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    column-gap: 15px;
+    row-gap: 50px;
+    border: 1px solid black;
+}
+
+.item {
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    border: 1px solid red;
+}
