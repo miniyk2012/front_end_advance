@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <style>
         body {
-            background: black;
+            color: rgba(165, 152, 177, 0.788);
+            background: honeydew;
             font-size: 18px;
+            font-family: 'Montserrat', 'Times New Roman', Times, serif, Verdana;
         }
+
         .typography {
-            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            line-height: 1.5em;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        p {
             font-size: 1.5em;
             text-align: center;
             width: 60%;
             margin: auto;
             line-height: 1.5em;
         }
+
+        #p1 {
+            background-color: #f00;
+        }
+
+        #p2 {
+            background-color: rgb(0, 255, 0);
+        }
+
+        #p3 {
+            background-color: #0000ff;
+        }
     </style>
 </head>
+
 <body>
-    <div class="typography">The other common value for text-decoration is line-through 
-        to strike out “deleted” text. But, remember that meaning should always be conveyed 
+    <div class="typography">The other common value for text-decoration is line-through
+        to strike out “deleted” text. But, remember that meaning should always be conveyed
+        through HTML—not CSS. It’s better to use the The other common value for text-decoration is line-through
+        to strike out “deleted” text. But, remember that meaning should always be conveyed
+        through HTML—not CSS. It’s better to use the.</div>
+
+    <div class="typography">The other common value for text-decoration is line-through
+        to strike out “deleted” text. But, remember that meaning should always be conveyed
+        through HTML—not CSS. It’s better to use the The other common value for text-decoration is line-through
+        to strike out “deleted” text. But, remember that meaning should always be conveyed
         through HTML—not CSS. It’s better to use the</div>
+
+    <p class="typography yangkai">laaal</p>
+    <p class="typography">一打有 <del>二十</del> <ins>十二</ins> 件。<ins>asffsd</ins></p>
+    <p>你好<em>妈妈</em>啊啊<strong>爸爸</strong></p>
+    <div>
+        <p id="p1">p1</p>
+        <p id="p2">p2</p>
+        <p id="p3">p3</p>
+    </div>
 </body>
+
 </html>
