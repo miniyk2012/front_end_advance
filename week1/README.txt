@@ -93,7 +93,9 @@ Flexbox教程:
         order: 顺序
 
 Grid教程: http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html
-
-
-[译] 选择 Grid 还是 Flex: https://juejin.im/post/5c7ce781e51d4514913c5bc4
 Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成"行"和"列"，产生单元格，然后指定"项目所在"的单元格，可以看作是二维布局.
+
+结论: grid和flex需要互相配合使用
+[译] 选择 Grid 还是 Flex: https://juejin.im/post/5c7ce781e51d4514913c5bc4
+grid与flex的战役: https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
+grid是否可以取代flex: https://css-tricks.com/css-grid-replace-flexbox/
