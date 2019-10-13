@@ -84,3 +84,7 @@ border-radius: 10px; 圆角
 
 
 Flexbox教程:
+row（默认值）：主轴为水平方向
+column：主轴为垂直方向
+justify-content属性定义了项目在主轴上的对齐方式
+align-items属性定义项目在交叉轴上如何对齐
