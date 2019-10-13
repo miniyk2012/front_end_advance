@@ -83,8 +83,17 @@ background-size: contain;  北京图片的大小显示
 border-radius: 10px; 圆角
 
 
-Flexbox教程:
-row（默认值）：主轴为水平方向
-column：主轴为垂直方向
-justify-content属性定义了项目在主轴上的对齐方式
-align-items属性定义项目在交叉轴上如何对齐
+Flexbox教程:    
+    container:
+        row（默认值）：主轴为水平方向
+        column：主轴为垂直方向
+        justify-content属性定义了项目在主轴上的对齐方式
+        align-items属性定义项目在交叉轴上如何对齐
+    子元素:
+        order: 顺序
+
+Grid教程: http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html
+
+
+[译] 选择 Grid 还是 Flex: https://juejin.im/post/5c7ce781e51d4514913c5bc4
+Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成"行"和"列"，产生单元格，然后指定"项目所在"的单元格，可以看作是二维布局.
