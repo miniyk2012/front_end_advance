@@ -104,3 +104,9 @@ grid是否可以取代flex: https://css-tricks.com/css-grid-replace-flexbox/
     浏览器自动创建的多余网格的列宽和行高。它们的写法与grid-template-columns和grid-template-rows完全相同。
     如果不指定这两个属性，浏览器完全根据单元格内容的大小，决定新增网格的列宽和行高。
     常用来显示无限多的评论列表.
+
+
+responsive layout:
+设计原则:
+    最小屏幕是基础布局
+    然后随着viewport增大, 开始使用media query
