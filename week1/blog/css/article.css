@@ -1,0 +1,68 @@
+/* global */
+
+.row-wrapper:nth-child(odd) {
+    background: #F2EEDA;
+}
+
+.row-wrapper .grid-container {
+    max-width: 1044px;
+    margin: 0px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+    font-size: 1.25em;
+    line-height: 1.2;
+    margin: 0 0 0.75em;
+    text-transform: uppercase;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+header nav a {
+    font-size: 18px;
+    color: #00a1d6;
+    text-transform: uppercase;
+    margin-right: 40px;
+}
+
+img {
+    width: 150px;
+}
+
+/* section */
+/* section {
+
+} */
+article.concise--top {
+    width: calc(66.66667% - 73.33333px);
+    margin-left: 44px;
+    margin-left: calc(16.66667% - 51.33333px + 88px);
+    margin-top: 88px;
+    margin-bottom: 79px;
+}
+
+@media (max-width: 480px) {
+    article.concise--top {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-left: calc(0% - 20px + 40px);
+    }
+}
+
