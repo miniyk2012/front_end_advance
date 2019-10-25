@@ -112,8 +112,8 @@ responsive layout:
     然后随着viewport增大, 开始使用media query
 
 grid中justify-content, justify-items的区别
-justify-content: 设置在contaner上, 只有当column未充满容器时有用(比如用1fr时就没有空余空间, 则该属性无效果), 用来决定column在容器中的布局
-justify-items: 决定grid的内容在某一列内部的布局, 设置在contaner上
+justify-content: 设置在container上, 只有当column未充满容器时有用(比如用1fr时就没有空余空间, 则该属性无效果), 用来决定column在容器中的布局
+justify-items: 决定grid的内容在某一列内部的布局, 设置在container上
 justify-self: 覆盖justify-items, 用在单独的item上
 
 https://stackoverflow.com/questions/48535585/the-difference-between-justify-self-justify-items-and-justify-content-in-css-gr
