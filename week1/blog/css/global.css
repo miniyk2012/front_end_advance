@@ -1,0 +1,105 @@
+/* global */
+
+:root {
+    --global-backgroud-color: #F2EEDA;
+    --dark-text-color: #594C4F;
+    --media-text-color: #551501;
+    --light-text-color: rgb(124, 119, 120);
+    --arrow-color: #E3857D;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 1em;
+}
+
+.row-wrapper:nth-child(odd) {
+    background: var(--global-backgroud-color);
+    color: var(--light-text-color);
+}
+
+.row-wrapper:nth-child(even) {
+    color: var(--dark-text-color);
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+    font-size: 3em;
+    line-height: 1.2;
+    margin: 0 0 0.25em;
+    text-transform: uppercase;
+    color: var(--big-text-color);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 2em;
+}
+
+.meta {
+    color: var(--media-text-color);
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.continue-reading>a {
+    color: var(--arrow-color);
+    padding-right: 25px;
+    background: url('../img/icon-arrow.svg') center right no-repeat;
+}
+
+/* header */
+header {
+    max-width: 1044px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+header nav {
+    grid-area: c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+header nav a {
+    font-size: 18px;
+    color: #00a1d6;
+    text-transform: uppercase;
+    margin-right: 40px;
+}
+
+img {
+    width: 120px;
+}
+
+.follow .button {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-image: url("../img/GitHub-Mark.png");
+}
