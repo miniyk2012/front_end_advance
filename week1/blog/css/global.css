@@ -58,7 +58,7 @@ h6 {
 .continue-reading>a {
     color: var(--arrow-color);
     padding-right: 25px;
-    background: url('../img/icon-arrow.svg') center right no-repeat;
+    background: url("../img/icon-arrow.svg") center right no-repeat;
 }
 
 /* header */

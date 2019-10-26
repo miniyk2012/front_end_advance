@@ -1,0 +1,239 @@
+/************ General Page Elements */
+.row-wrapper {
+  &:nth-child(odd) {
+    background: $row-background;
+  }
+    
+  .grid-container {
+    @include grid-container();
+    max-width: 1044px;
+    margin: 0px auto;
+  }  
+}
+
+
+/************ Navigation */
+header {
+  width: 100%;
+  height: 72px;
+  display:table;
+
+  #logo {
+    display: table-cell; 
+    vertical-align:middle;
+  }
+  
+  nav {
+    float:right;
+    line-height: 72px;
+    
+    & a {
+      font-size:18px;
+      color: #E3857D;
+      text-transform: uppercase;
+      margin-right:40px;
+      @include grid-media($neat-grid--mobile) {
+        margin-right: 12px;
+      }
+      
+      &:last-child {
+        margin-right:9px;
+      }
+    }
+  }
+}
+
+
+/************ Teaser Top */
+article.teaser--top {
+  @include grid-column(8, $neat-grid--page);
+  @include grid-push(2, $neat-grid--page);
+  @include grid-media($neat-grid--mobile) {
+    @include grid-column(4);
+    @include grid-push(0);
+  }
+  
+  margin-top:88px;
+  margin-bottom:79px;
+  
+  & .teaser-image {
+    margin-bottom:18px;
+    @include size($teaser-image-width, $teaser-image-height);
+    @include retina-image($teaser-image-width, $teaser-image-height, '../img/chevron-teaser');
+    @include grid-media($neat-grid--mobile) {
+      background-size: contain;
+      @include size($teaser-image-width, $teaser-image-height/2)
+    }
+  }
+}
+
+
+/************ Recent Posts */
+#recent-posts {
+  @include grid-column(8, $neat-grid--page);
+  @include grid-push(2, $neat-grid--page);
+  padding: 10px 0px 75px 0px;
+  @include grid-media($neat-grid--mobile) {
+    @include grid-column(4);
+    @include grid-push(0);
+  }
+  
+  .teaser--recent {
+    margin-top:50px;
+  }
+  
+  .meta {
+    float:right;
+    @include grid-media($neat-grid--mobile) {
+      float: none;
+    }
+  }
+  
+}
+
+
+/************ Article Detail */
+#full-article {
+  width: 100%;
+  padding-bottom:50px;
+
+  #article-content {
+    @include grid-column(10, $neat-grid--page);
+    @include grid-push(1, $neat-grid--page);
+  }
+
+  %article-images {
+    background-position:center;
+    border-radius:$base-border-radius;
+  }
+  #main-image {
+    @extend %article-images;
+    margin:72px 0px 60px 0px;
+    @include size($main-image-width, $main-image-height);
+    background-image:url(../img/chevron-main-image.jpg);
+    @media
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image:url(../img/chevron-main-image@2x.jpg);
+    }
+  }
+  .content-image {
+    @extend %article-images;
+    margin:15px 0px 27px 0px;
+    @include size($content-image-width, $content-image-height);
+    background-image:url(../img/image-article-content.jpg);
+    @media
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image:url(../img/image-article-content@2x.jpg);
+    }
+  } 
+}
+
+
+/************ Subscribe */
+%whitebox {
+  @include grid-column(10, $neat-grid--page);
+  @include grid-push(1, $neat-grid--page);
+  padding: 48px 45px 45px 45px;
+  @include grid-media($neat-grid--mobile) {
+    @include grid-column(4);
+    @include grid-push(0);
+  }
+  margin-bottom:105px;
+  margin-top:75px;
+  background:white;
+  border-top:4px solid $red;  
+}
+
+#subscribe {
+  @extend %whitebox;
+  
+  .note {
+    float:left;
+    margin-left: map-get($neat-grid--page, columns);
+  }
+  
+  .follow {
+    float:right;
+    margin-right: map-get($neat-grid--page, columns);
+  }
+}
+
+
+/************ Author */
+#author {
+  @include grid-column(10, $neat-grid--page);
+  @include grid-push(1, $neat-grid--page);
+  padding-top:75px;
+      
+  .author-icon {
+    float:left;
+    margin-right:23px;
+    @include size($author-image-width, $author-image-height);
+    background-image:url(../img/author.jpg);
+    @media
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image:url(../img/author@2x.jpg);
+    }
+    border-radius:50%;
+  }
+}
+
+/************ Recommended Reading */
+#recommended-reading {
+  @extend %whitebox;
+  margin-top:55px;
+}
+
+
+/************ About */
+#about {
+  @include grid-column(9, $neat-grid--page);
+  @include grid-push(1, $neat-grid--page);
+  @include grid-media($neat-grid--mobile) {
+    @include grid-column(4);
+    @include grid-push(0);
+  }
+  padding: 79px 0 140px 0;
+
+  %tower-common {
+    margin-top:30px;
+  }
+
+  .tower-icon {
+    @extend %tower-common;
+    float: left;
+    @include size(114px, 147px);
+    margin-right: 30px;
+    background-size: 114px 147px;
+    background-image:url(../img/icon-tower.png);
+    @media
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image:url(../img/icon-tower@2x.png);
+    }
+    @include grid-media($neat-grid--mobile) {
+      float:none;
+      margin: 0px auto;
+    }
+  }
+  p {
+    @extend %tower-common;
+  }
+}
+
+
+/************ Footer */
+footer {
+  @include grid-column(12, $neat-grid--page);
+  font-size:$small-font-size;
+  height:72px;
+  line-height:72px;
+  text-align: center;
+}

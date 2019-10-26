@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-column-gap: 20px;
     grid-template-areas:
-        'a b c';
+        "a b c";
     justify-items: center;
 }
 
