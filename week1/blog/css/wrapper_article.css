@@ -1,0 +1,17 @@
+.row-wrapper .grid-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    max-width: 1044px;
+    margin: 10px auto;
+    display: grid;
+    row-gap: 20px;
+    justify-items: center;
+}
+
+
+
+
+
+

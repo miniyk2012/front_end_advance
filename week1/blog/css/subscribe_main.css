@@ -1,0 +1,14 @@
+/* subscribe */
+#subscribe {
+    grid-area: b;
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+@media (max-width: 800px) {
+    #subscribe {
+        width: calc(100% - 10px);
+    }
+}

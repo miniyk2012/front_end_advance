@@ -1,0 +1,42 @@
+/* recommended-reading */
+
+#recommended-reading {
+    border-radius: 5px;
+    box-sizing: border-box; 
+    width: calc(100% - 100px);
+    border-top: 4px solid var(--arrow-color);
+    background: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    #recommended-reading {
+        width: calc(100% - 10px);
+        padding-left: 40px;
+    }
+}
+
+#recommended-reading>h5 {
+    font-size: 1.5em;
+    color: var(--arrow-color);
+}
+
+ul {
+    font-size: 1.2em;
+    list-style-type: none;
+    padding: 0;
+}
+li::before {
+    content: "›";
+    color: var(--arrow-color);
+}
+
+ul>li>a {
+    padding-left: 7px;
+    color: var(--media-text-color);
+}

@@ -1,0 +1,33 @@
+/* full-article */
+#full-article {
+    display: grid;
+    row-gap: 25px;
+    width: calc(100% - 100px);
+}
+
+@media (max-width: 800px) {
+    #full-article {
+        width: calc(100% - 10px);
+    }
+}
+
+
+#main-image {
+    margin-bottom: 18px;
+    height: 400px;
+    width: 100%;
+    background-size: 100% 400px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-image: url("../img/wolf.png");
+}
+
+.content-image {
+    margin-bottom: 18px;
+    background-image: url("../img/sky.jpg");
+    height: 800px;
+    width: 100%;
+    background-size: 100% 800px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}

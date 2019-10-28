@@ -1,0 +1,32 @@
+/* author */
+#author {
+    width: calc(100% - 100px);
+    padding-top: 50px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+}
+
+@media (max-width: 800px) {
+    #author {
+        width: calc(100% - 10px);
+    }
+}
+
+.author-icon {
+    justify-self: center;
+    flex-grow: 1;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("../img/avatar.jpg");
+}
+
+.author-content>h5 {
+    color: var(--arrow-color);
+    font-size: 1.5em;
+}

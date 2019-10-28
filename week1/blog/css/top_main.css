@@ -1,0 +1,25 @@
+/* concise--top */
+article.concise--top {
+    grid-area: b;
+    width: calc(100% - 100px);
+}
+
+@media (max-width: 800px) {
+    article.concise--top {
+        width: calc(100% - 10px);
+    }
+}
+
+.concise-image {
+    margin-bottom: 18px;
+    height: 300px;
+    width: 100%;
+    background-size: 100% 300px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-image: url("../img/wolf.png");
+}
+
+.concise--top .meta {
+    font-size: 1em;
+}
