@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+        lala
+        <ul>
+            <li class="highlight-span">a</li>
+            <li class="highlight-span">b</li>
+            <li class="highlight-span">c</li>
+        </ul>
+    </div>
+    <div id="box">
+        <span>Foo</span>
+        <span>Bar</span>
+        <span>Baz</span>
+    </div>
+    <script>
+        let content = document.getElementById('content');
+        console.log(Object.getPrototypeOf(content));
+        console.log(document.getElementById('notexist'));
+        const l = document.getElementsByClassName('highlight-span');
+        console.log(l);
+
+        /*The following function calls a function recursively for 
+        each node contained by a root node (including the root itself):*/
+        function eachNode(rootNode, callback){
+            if(!callback){
+                var nodes = [];
+                eachNode(rootNode, function(node){
+                    nodes.push(node);
+                });
+                return nodes;
+            }
+        
+            if(false === callback(rootNode))
+                return false;
+        
+            if(rootNode.hasChildNodes()){
+                var nodes = rootNode.childNodes;
+                for(var i = 0, l = nodes.length; i < l; ++i)
+                    if(false === eachNode(nodes[i], callback))
+                        return;
+            }
+        }
+        var box = document.getElementById("box");
+        nodes = eachNode(box, function (node) {
+            if (null != node.textContent) {
+                console.log(node.textContent);
+            }
+        });
+    </script>
+</body>
+
+</html>
