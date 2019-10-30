@@ -14,10 +14,7 @@ article.concise--top {
     margin-bottom: 18px;
     height: 300px;
     width: 100%;
-    background-size: 100% 300px;
     border-radius: 5px;
-    background-repeat: no-repeat;
-    background-image: url("../img/wolf.png");
 }
 
 .concise--top .meta {

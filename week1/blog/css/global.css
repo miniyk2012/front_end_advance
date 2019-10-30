@@ -8,6 +8,7 @@
     --arrow-color: #E3857D;
 }
 
+
 html,
 body {
     height: 100%;
@@ -15,6 +16,9 @@ body {
     font-size: 1em;
 }
 
+figure {
+    margin: 0;
+}
 .row-wrapper:nth-child(odd) {
     background: var(--global-backgroud-color);
     color: var(--light-text-color);
@@ -95,11 +99,22 @@ img {
     width: 120px;
 }
 
-.follow .button {
+.follow .button--github {
     display: block;
     width: 100px;
     height: 100px;
     background-size: 100px;
     background-repeat: no-repeat;
     background-image: url("../img/GitHub-Mark.png");
+
+}
+
+.follow .button--facebook {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-image: url("../img/facebook.png");
+
 }

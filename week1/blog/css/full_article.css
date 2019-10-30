@@ -16,18 +16,13 @@
     margin-bottom: 18px;
     height: 400px;
     width: 100%;
-    background-size: 100% 400px;
     border-radius: 5px;
-    background-repeat: no-repeat;
-    background-image: url("../img/wolf.png");
 }
 
-.content-image {
+#content-image {
     margin-bottom: 18px;
-    background-image: url("../img/sky.jpg");
     height: 800px;
     width: 100%;
     background-size: 100% 800px;
     border-radius: 5px;
-    background-repeat: no-repeat;
 }
