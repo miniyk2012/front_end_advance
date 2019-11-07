@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="myBtn">xx</button>
+    <script>
+        document.addEventListener('click', function () {
+            console.log('The document was clicked');
+        });
+
+        document.body.addEventListener('click', function () {
+            console.log('The document body was clicked');
+        });
+
+        document.getElementById("myBtn").addEventListener("click", myThirdClick);
+        document.getElementById("myBtn").addEventListener("click", mySecondClick);
+        document.getElementById("myBtn").addEventListener("click", myClick);
+
+
+        function myClick() {
+            console.log("myClick");
+        }
+
+        function mySecondClick() {
+            console.log("mySecondClick");
+        }
+
+        function myThirdClick() {
+            console.log("myThirdClick");
+        }
+    </script>
+</body>
+
+</html>

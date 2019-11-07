@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom is Ready</title>
+    <script src="js/underscore-min.js"></script>
+    <script>
+        let a = {
+            name: 'yangkai',
+        };
+        let b = {
+            name: 'yangkai',
+        }
+        console.log(a === b);
+        console.log(_.isEqual(a, b));
+        for (let i = 0; i < 1000000000; i++) {} // 这段同步脚本将会延迟DOM解析,
+        // 所以DOMContentLoaded事件将会延迟执行.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('footer').style.backgroundColor = 'purple';
+        });
+
+    </script>
+</head>
+
+<body>
+    <footer>你好</footer>
+</body>
+
+</html>

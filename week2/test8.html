@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="main-heading" class="ank-student jpk-modal">Learn Web Development at Udacity</h1>
+    <div>shabi</div>
+
+    <script>
+        let mainHeading = document.querySelector('h1');
+
+        // add an ID to the heading's sibling element
+        mainHeading.nextElementSibling.setAttribute('id', 'heading-sibling');
+
+        // use the newly added ID to access that element
+        document.querySelector('#heading-sibling').style.backgroundColor = 'red';
+
+        mainHeading = document.querySelector('#main-heading');
+
+        // store the list of classes in a variable
+        let listOfClasses = mainHeading.className;
+
+        // logs out the string "ank-student jpk-modal"
+        console.log(listOfClasses);
+
+        listOfClasses = mainHeading.classList;
+        console.log(listOfClasses);
+        listOfClasses.toggle('nibuclass');
+        listOfClasses.toggle('ank-student');
+
+        function myEventListeningFunction() {
+            console.log('howdy');
+        }
+
+        // adds a listener for clicks, to run the `myEventListeningFunction` function
+        document.addEventListener('click', myEventListeningFunction);
+        mainHeading.addEventListener('mousemove', myEventListeningFunction);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>||Working with elements||</title>
+</head>
+
+<body>
+    <div id="div1">The text above has been created dynamically.</div>
+    <div id="one">one</div>
+
+    <div id="top">
+        <div id="nested">haha</div>
+        <div id="nested">haha</div>
+        <div id="nested">haha</div>
+        <div id="nested">haha</div>
+    </div>
+
+    <div id="top1">
+        <div id="nested1">haha1</div>
+        <div id="nested2">haha2</div>
+        <div id="nested3">haha3</div>
+        <div id="nested4">haha4</div>
+    </div>
+    <script>
+        const divNew = document.createElement('div');
+        const text = document.createTextNode('hahah');
+        divNew.appendChild(text);
+        const div1 = document.getElementById('div1');
+
+
+        fragment = document.createDocumentFragment();
+        fragment.appendChild(divNew);
+        document.body.insertBefore(fragment, div1);
+        var d1 = document.getElementById('one');
+        d1.insertAdjacentHTML('afterbegin', '<div id="two">two</div>');
+        
+        let element = document.getElementById("top");
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
+
+        let x1 = document.getElementById("nested1");
+        if (x1.parentElement) {
+            x1.parentElement.removeChild(x1);
+        }
+        let x2 = document.getElementById("nested2");
+        x2.remove();
+
+        let top1 = document.getElementById("top1");
+
+        top1.style.color = 'red';
+        top1.style.fontSize = '100px';
+
+    </script>
+</body>
+
+</html>
