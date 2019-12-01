@@ -21,12 +21,20 @@ app.get('/home', function (req, res) {
 app.get('/files/', function (req, res) {
     res.send('Files');
 });
-
+const appData = {
+    name: 'yangkai',
+}
+app.get('/all', function (req, res) {
+    res.send(appData)
+  })
+  
 app.use(express.static('landing-page'));
 
 const server = app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
+
+
 
 console.log(server);
 console.log('xxx');

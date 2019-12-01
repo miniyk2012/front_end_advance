@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="l1">
+        l1
+        <div id="l2">l2</div>
+    </div>
+    <button>
+        Show this
+    </button>
+    <script>
+        let count = 1;
+
+        function addParas() {
+            if (count > 20000) {
+                return;
+            }
+            const fragment = document.createDocumentFragment();
+
+            for (let i = 1; i <= 5; i++) {
+                const newElement = document.createElement('p');
+                newElement.textContent = 'This is paragraph number ' + count;
+                count = count + 1;
+
+                fragment.appendChild(newElement);
+            }
+            document.body.appendChild(fragment);
+
+            setTimeout(addParas, 1000);
+        }
+        addParas();
+        let button = document.querySelector('button');
+        button.addEventListener('click', function () {
+            this.textContent = count;
+            console.log(this.tagName);
+        });
+        var l1 = document.getElementById('l1'),
+            l2 = document.getElementById('l2');
+
+        l1.addEventListener('click', function () {
+            console.log('l1 capture', this);
+        }, true);
+        l1.addEventListener('click', function () {
+            console.log('l1 bubbling', this);
+        });
+        l2.addEventListener('click', function () {
+            console.log('l2 target', this);
+        });
+    </script>
+</body>
+
+</html>

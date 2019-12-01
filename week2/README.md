@@ -63,6 +63,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed'); // 译者注："DOM完全加载以及解析"
 });
 
-'load'比DOMContentLoaded晚, 它会等突破加载后再触发
+'load'比DOMContentLoaded晚, 它会等图片加载后再触发
 
 2者都是在document上触发的
+
+# 性能篇
+const myDocFrag = document.createDocumentFragment();
+在DocumentFragment节点下的操作不会引发reflow和repaint
+
+Reflow & Repaint
+Reflow (计算)is the process of calculating the dimensions and position of page elements. This is a computationally intensive (slow) tasks. 
+Repaint (绘制)is the process of drawing the pixels to the screen. This is faster than reflow, but is still not a fast process.
+
+# call stack and Event Loop
+call stack: js单线程, 一共一个stack, 就是个函数调用堆栈
+event loop: 
+两个原则:
+ 1. If some JavaScript is running, let it run until it is finished ("run-to-completion"). 
+ 2. If no JavaScript is running, run any pending event handlers.
+
+    ![eventloop1](./eventloop.png)
+    可以认为event handler存在Browser里面, 当有事件发生时, browser把对应事件处理函数放到event queue中, 等到当前的call stack变空(run to completion)后, 再把queue中事件处理函数放到call stack中跑.
+
+    ![eventloop2](./eventloop2.png)
