@@ -41,6 +41,12 @@ async function getPost(e) {
         fav: fav
     });
     console.log(retVal);
+    data = await updateUI();
+    console.log(data);
+}
+
+async function updateUI() {
     const data = await retrieveData('/all');
     document.getElementById('content').innerHTML = JSON.stringify(data);
+    return data;
 }
