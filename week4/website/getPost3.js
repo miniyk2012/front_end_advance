@@ -50,3 +50,18 @@ async function updateUI() {
     document.getElementById('content').innerHTML = JSON.stringify(data);
     return data;
 }
+
+
+// 下面的代码需要再启动一个支持cors的服务器跑在3000端口的, 验证跨域功能
+getWeather = async () => { 
+    data = await fetch('http://localhost:3000/all');
+    data = await data.json()
+    return data;
+};
+
+async function logData() {
+    data = await getWeather();
+    console.log(data);
+}
+
+logData();
