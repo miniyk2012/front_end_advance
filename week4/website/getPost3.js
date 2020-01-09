@@ -65,6 +65,7 @@ async function logData() {
 }
 
 console.log(logData());
+// js通过直接调用异步函数
 logData();
 logData();
 logData();
