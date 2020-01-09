@@ -64,4 +64,9 @@ async function logData() {
     console.log(data);
 }
 
+console.log(logData());
 logData();
+logData();
+logData();
+logData();
+console.log('wawa');
