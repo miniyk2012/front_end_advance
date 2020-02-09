@@ -16,11 +16,13 @@ async function logInOrder(urls) {
 
 // 顺序返回结果, 快速方法, 同时await, 然后顺序输出
 async function fastLogInOrder(urls) {
+    // 同时wait
     const textPromises = urls.map(async url => {
         return await wait(url, 500);
     })
+    // 顺序获得结果
     for (const textPromise of textPromises) {
-        console.log(await textPromise);  // 这里保证了会顺序输出结果
+        console.log(await textPromise); 
     }
 }
 
